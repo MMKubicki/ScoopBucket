@@ -1,0 +1,29 @@
+{
+    "version": "1.15.6",
+    "description": "A dynamic and functional programming language designed for building scalable and maintainable applications. Built on latest OTP",
+    "homepage": "https://elixir-lang.org/",
+    "license": "Apache-2.0",
+    "url": "https://github.com/elixir-lang/elixir/releases/download/v1.15.6/elixir-otp-26.zip",
+    "hash": "9b503219bff21fc84e8cbb65e63d5bfc6c0523c73153723bb5efa8994d37a259",
+    "env_add_path": "bin",
+    "suggest": {
+        "Erlang": "erlang"
+    },
+    "checkver": {
+        "script": [
+            "$responseRelease = (iwr -Headers @{'Accept'='applications/vnd.github+json';'X-Github-Api-Version'='2022-11-28'} -Uri 'https://api.github.com/repos/elixir-lang/elixir/releases/latest').Content | ConvertFrom-Json",
+            "$responseRelease.tag_name -match '^v(?<version>[\\d.]+)$'",
+            "$version = $Matches.version",
+            "$responseAssets = (iwr -Headers  @{'Accept'='applications/vnd.github+json';'X-Github-Api-Version'='2022-11-28'} -Uri $responseRelease.assets_url).Content | ConvertFrom-Json",
+            "$otpVersion = ($responseAssets |foreach{$_.name -match '^elixir-otp-(?<otpversion>\\d+).zip$' ? $Matches.otpversion : $false} |measure -Maximum {[int]$_}).Maximum",
+            "Write-Output $version $otpVersion"
+        ],
+        "regex": "(?<version>[\\d.]+)\\s(?<otpversion>.+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/elixir-lang/elixir/releases/download/v$version/elixir-otp-$matchOtpversion.zip",
+        "hash": {
+            "url": "https://github.com/elixir-lang/elixir/releases/download/v$version/elixir-otp-$matchOtpversion.zip.sha256sum"
+        }
+    }
+}
