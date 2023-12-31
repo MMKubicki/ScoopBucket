@@ -1,0 +1,31 @@
+{
+    "version": "1.8.0",
+    "description": "General purpose read/extract tool for Nintendo Switch file formats",
+    "homepage": "https://github.com/jakcron/nstool",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://raw.githubusercontent.com/jakcron/nstool/stable/LICENSE"
+    },
+    "bin": "nstool.exe",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/jakcron/nstool/releases/download/v1.8.0/nstool-v1.8.0-win_x64.zip",
+            "hash": "924d0e7b563fd82743f61310900216eba3398896121ea31afc2263d2ad40dace"
+        },
+        "32bit": {
+            "url": "https://github.com/jakcron/nstool/releases/download/v1.8.0/nstool-v1.8.0-win_x86.zip",
+            "hash": "88d315df781171637bc3c11ea6d0b431c9dde98b4eee8f4f3fd5a9615311f2eb"
+        }
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/jakcron/nstool/releases/download/v$version/nstool-v$version-win_x64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/jakcron/nstool/releases/download/v$version/nstool-v$version-win_x86.zip"
+            }
+        }
+    }
+}
