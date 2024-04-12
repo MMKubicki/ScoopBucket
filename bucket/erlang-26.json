@@ -38,7 +38,7 @@
     },
     "checkver": {
         "url": "https://www.erlang.org/downloads/26",
-        "regex": "https:\\/\\/erlang.org\\/download\\/otp_win64_([\\d.]+).exe"
+        "regex": "https:\\/\\/github.com\\/erlang\\/otp\\/releases\\/download\\/OTP-([\\d.]+)\\/otp_win64_\\1\\.exe"
     },
     "autoupdate": {
         "architecture": {
