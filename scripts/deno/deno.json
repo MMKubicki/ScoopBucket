@@ -1,0 +1,9 @@
+{
+  "version": "0.0.0",
+  "tasks": {
+    "gh_releases": "deno run -A gh_releases.ts"
+  },
+  "imports": {
+    "std/": "https://deno.land/std@0.223.0/"
+  }
+}

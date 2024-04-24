@@ -22,5 +22,7 @@
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/tmp": true
-    }
+    },
+    "deno.enable": true,
+    "deno.config": "./scripts/deno/deno.json"
 }
