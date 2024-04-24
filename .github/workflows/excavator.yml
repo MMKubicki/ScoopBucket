@@ -18,10 +18,13 @@ jobs:
           path: ${{ env.DENO_DIR }}
           key: ${{ hashFiles('scripts/deno/deno.lock') }}
       - uses: denoland/setup-deno@v1
+        env:
+          DENO_DIR: ${{ env.DENO_DIR }}
         with:
           deno-version: v1.x
       - name: Excavate
         uses: ScoopInstaller/GithubActions@main
         env:
+          DENO_DIR: ${{ env.DENO_DIR }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SKIP_UPDATED: 1
