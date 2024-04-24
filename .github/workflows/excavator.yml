@@ -15,11 +15,9 @@ jobs:
       - name: Cache Deno dependencies
         uses: actions/cache@v4
         with:
-          path: ${{ env.DENO_DIR }}
+          path: scripts/deno/${{ env.DENO_DIR }}
           key: ${{ hashFiles('scripts/deno/deno.lock') }}
       - uses: denoland/setup-deno@v1
-        env:
-          DENO_DIR: ${{ env.DENO_DIR }}
         with:
           deno-version: v1.x
       - name: Excavate
