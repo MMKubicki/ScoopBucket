@@ -16,7 +16,11 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ env.DENO_DIR }}
-          key: ${{ hashFiles('scripts/deno/deno.lock') }}
+          key: deno-dir-${{ hashFiles('scripts/deno/deno.lock') }}
+          restore-keys: |
+            ${{ hashFiles('scripts/deno/deno.lock') }}
+            deno-dir-
+            deno-
       - uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
