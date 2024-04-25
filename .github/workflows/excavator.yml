@@ -9,13 +9,13 @@ jobs:
     name: Excavate
     runs-on: windows-latest
     env:
-      DENO_DIR: deno_cache
+      DENO_DIR: C:\deno_cache
     steps:
       - uses: actions/checkout@main
       - name: Cache Deno dependencies
         uses: actions/cache@v4
         with:
-          path: scripts/deno/${{ env.DENO_DIR }}
+          path: ${{ env.DENO_DIR }}
           key: ${{ hashFiles('scripts/deno/deno.lock') }}
       - uses: denoland/setup-deno@v1
         with:
