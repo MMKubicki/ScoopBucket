@@ -1,0 +1,24 @@
+{
+    "version": "0.6.3",
+    "description": "GUI Tool To Removes Ads From Various Places Around Windows 11. Requires .NET 8.0 Desktop Runtime.",
+    "homepage": "https://grain-lang.org/",
+    "license": " LGPL-3.0-only",
+    "bin": "grain.exe",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/grain-lang/grain/releases/download/grain-v0.6.3/grain-win-x64.exe#/grain.exe",
+            "hash": "6d849f27555d43d50c6357218ea457ae14bf9145a372c0bab9e9cadb35054286"
+        }
+    },
+    "checkver": {
+        "github": "https://github.com/grain-lang/grain",
+        "regex": "grain-(?:v|V)?([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/grain-lang/grain/releases/download/grain-v$version/grain-win-x64.exe#/grain.exe"
+            }
+        }
+    }
+}
