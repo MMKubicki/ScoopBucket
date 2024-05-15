@@ -1,0 +1,40 @@
+{
+    "version": "0.12.0-alpha.0",
+    "description": "Open Source (Go) implementation of \"Zanzibar: Google's Consistent, Global Authorization System\". Ships gRPC, REST APIs, newSQL, and an easy and granular permission language. Supports ACL, RBAC, and other access models.",
+    "homepage": "https://www.ory.sh/keto/",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ory/keto/releases/download/v0.12.0-alpha.0/keto_0.12.0-alpha.0-windows_64bit.zip",
+            "hash": "ca9682b5c9a3a90ee4850c9259fa3213f6190c7adba786e8516ac235aecef899"
+        },
+        "32bit": {
+            "url": "https://github.com/ory/keto/releases/download/v0.12.0-alpha.0/keto_0.12.0-alpha.0-windows_32bit.zip",
+            "hash": "c6206ced92ea95949f2d546fb3d0dbf2e7ae9a1d9d2742c0bc9557588c15e3f2"
+        },
+        "arm64": {
+            "url": "https://github.com/ory/keto/releases/download/v0.12.0-alpha.0/keto_0.12.0-alpha.0-windows_arm64.zip",
+            "hash": "473b55cd38de76d9793777e30afd0a7be02a657c1d5e84dee542087693d51b84"
+        }
+    },
+    "bin": "keto.exe",
+    "checkver": {
+        "github": "https://github.com/ory/keto"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ory/keto/releases/download/v$version/keto_$version-windows_64bit.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/ory/keto/releases/download/v$version/keto_$version-windows_32bit.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/ory/keto/releases/download/v$version/keto_$version-windows_arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/ory/keto/releases/download/v$version/checksums.txt"
+        }
+    }
+}
