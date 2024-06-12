@@ -1,6 +1,6 @@
 {
     "version": "1.16.3",
-    "description": "A dynamic and functional programming language designed for building scalable and maintainable applications. Built on OTP-27",
+    "description": "A dynamic and functional programming language designed for building scalable and maintainable applications. Built on OTP-25",
     "homepage": "https://elixir-lang.org/",
     "license": "Apache-2.0",
     "url": "https://github.com/elixir-lang/elixir/releases/download/v1.16.3/elixir-otp-25.zip",
