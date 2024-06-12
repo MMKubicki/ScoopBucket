@@ -1,10 +1,10 @@
 {
-    "version": "1.16.3",
+    "version": "1.17.0",
     "description": "A dynamic and functional programming language designed for building scalable and maintainable applications. Built on latest OTP",
     "homepage": "https://elixir-lang.org/",
     "license": "Apache-2.0",
-    "url": "https://github.com/elixir-lang/elixir/releases/download/v1.16.3/elixir-otp-26.zip",
-    "hash": "55800d377acb78229e8611cd0cd7128a0ee9f7214989a0a2a6936461de9d8b89",
+    "url": "https://github.com/elixir-lang/elixir/releases/download/v1.17.0/elixir-otp-27.zip",
+    "hash": "dfc74a49a7db43caf138d8ab1597d7a2e000d5f6384cc902871dc6b6c46982e2",
     "env_add_path": "bin",
     "suggest": {
         "Erlang": "erlang"
