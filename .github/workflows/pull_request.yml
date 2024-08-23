@@ -6,6 +6,7 @@ jobs:
   pullRequestHandler:
     name: PullRequestHandler
     runs-on: windows-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@main
       - name: PullRequestHandler
