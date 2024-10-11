@@ -1,9 +1,19 @@
-import { Command, formatSemVer, Octokit } from "./deps.ts";
+import { format as formatSemVer } from "@std/semver"
+import { Command } from "@cliffy/command"
+import { Octokit } from "octokit";
+
 import type { FetchParams } from "./github.ts";
+
 import { getLastest, getLastestMajor } from "./github.ts";
 
+import context from "./deno.json" with { type: "json" };
+
+function getUserAgent() {
+  return `MMKubicki-ScoopBucket/${context.version} octokit.js`
+}
+
 await new Command()
-  .name("filter-gh-releases")
+  .name("gh-releases")
   .description(
     "Pulls all github releases and returns latest (or specified major)",
   )
@@ -25,7 +35,7 @@ await new Command()
   .arguments("<owner:string> <repo:string>")
   .example(
     "Get latest version of https://github.com/llvm/llvm-project",
-    "filter-gh-releases llvm llvm-project",
+    "gh-releases llvm llvm-project --tag-cut 8",
   )
   .action(async ({ major, tagCut }, owner, repo) => {
     const params: FetchParams = {
@@ -35,7 +45,7 @@ await new Command()
         prefix_cut: tagCut,
       },
       octokit: new Octokit({
-        userAgent: "MMKubicki-ScoopBucket/1.0.0",
+        userAgent: getUserAgent(),
       }),
     };
 

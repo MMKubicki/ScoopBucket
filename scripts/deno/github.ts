@@ -1,5 +1,6 @@
-import { compareSemVer, SemVer, tryParseSemVer } from "./deps.ts";
-import type { Octokit } from "./deps.ts";
+import { tryParse as tryParseSemVer, compare as compareSemVer } from "@std/semver"
+import type { SemVer } from "@std/semver";
+import type { Octokit } from "octokit";
 
 export type TagEditParams = {
   prefix_cut?: number;

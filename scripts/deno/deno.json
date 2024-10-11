@@ -1,9 +1,12 @@
 {
-  "version": "0.0.0",
+  "version": "1.0.1",
   "tasks": {
-    "gh_releases": "deno run -A gh_releases.ts"
+    "gh_releases": "deno run --allow-net=api.github.com gh_releases.ts"
   },
   "imports": {
-    "std/": "https://deno.land/std@0.223.0/"
+    "@cliffy/command": "jsr:@cliffy/command@^1.0.0-rc.7",
+    "@std/datetime": "jsr:@std/datetime@^0.225.2",
+    "@std/semver": "jsr:@std/semver@^1.0.3",
+    "octokit": "npm:octokit@^4.0.2"
   }
 }
