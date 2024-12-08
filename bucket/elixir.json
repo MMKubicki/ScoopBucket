@@ -27,5 +27,3 @@
         }
     }
 }
---exclude-drafts         Exclude draft releases
-      --exclude-pre-releases
