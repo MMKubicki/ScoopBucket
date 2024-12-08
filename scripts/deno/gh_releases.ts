@@ -46,6 +46,7 @@ await new Command()
       },
       octokit: new Octokit({
         userAgent: getUserAgent(),
+        auth: Deno.env.get("GH_TOKEN")
       }),
     };
 

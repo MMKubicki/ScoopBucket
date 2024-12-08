@@ -1,7 +1,7 @@
 {
   "version": "1.0.1",
   "tasks": {
-    "gh_releases": "deno run --allow-net=api.github.com gh_releases.ts"
+    "gh_releases": "deno run --allow-net=api.github.com --allow-env=GH_TOKEN gh_releases.ts"
   },
   "imports": {
     "@cliffy/command": "jsr:@cliffy/command@^1.0.0-rc.7",
