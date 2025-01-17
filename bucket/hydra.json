@@ -1,20 +1,20 @@
 {
-    "version": "2.2.0",
+    "version": "2.3.0",
     "description": "OpenID Certified™ OpenID Connect and OAuth Provider written in Go - cloud native, security-first, open source API security for your infrastructure. SDKs for any language. Works with Hardware Security Modules. Compatible with MITREid.",
     "homepage": "https://www.ory.sh/hydra/",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ory/hydra/releases/download/v2.2.0/hydra_2.2.0-windows_64bit.zip",
-            "hash": "bab30d975c281b5ab649869a7ea0bda24facbfb41ebcc1806d970393a5aceba7"
+            "url": "https://github.com/ory/hydra/releases/download/v2.3.0/hydra_2.3.0-windows_64bit.zip",
+            "hash": "e8b9a8e20da3b3734b5d30b2c459a8cc638c7e8817b7901c12d4782623121886"
         },
         "32bit": {
-            "url": "https://github.com/ory/hydra/releases/download/v2.2.0/hydra_2.2.0-windows_32bit.zip",
-            "hash": "b14042782d6b809f7be1112ef8f1157d621390c9973fc2c1f9aa94e52856fcad"
+            "url": "https://github.com/ory/hydra/releases/download/v2.3.0/hydra_2.3.0-windows_32bit.zip",
+            "hash": "83863c960a9de29bbda0c735ba70796139d806254626b4a48846b1e56bac30c0"
         },
         "arm64": {
-            "url": "https://github.com/ory/hydra/releases/download/v2.2.0/hydra_2.2.0-windows_arm64.zip",
-            "hash": "96916e7fe6c2188b2605680c099555e88943b0329b2a46c228cd88ce14130e96"
+            "url": "https://github.com/ory/hydra/releases/download/v2.3.0/hydra_2.3.0-windows_arm64.zip",
+            "hash": "cbcc29b390eefd54f532844f2439a54b3d74c0045b2652527c7bc80911e6257e"
         }
     },
     "bin": "hydra.exe",
