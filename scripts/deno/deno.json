@@ -5,8 +5,8 @@
   },
   "imports": {
     "@cliffy/command": "jsr:@cliffy/command@^1.0.0-rc.7",
-    "@std/datetime": "jsr:@std/datetime@^0.225.2",
+    "@std/datetime": "jsr:@std/datetime@^0.225.3",
     "@std/semver": "jsr:@std/semver@^1.0.3",
-    "octokit": "npm:octokit@^4.0.2"
+    "octokit": "npm:octokit@^4.1.0"
   }
 }
