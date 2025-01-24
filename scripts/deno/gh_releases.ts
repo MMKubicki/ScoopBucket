@@ -1,5 +1,4 @@
-import { format as formatSemVer } from "@std/semver"
-import { Command } from "@cliffy/command"
+import { Command } from "@cliffy/command";
 import { Octokit } from "octokit";
 
 import type { FetchParams } from "./github.ts";
@@ -9,7 +8,7 @@ import { getLastest, getLastestMajor } from "./github.ts";
 import context from "./deno.json" with { type: "json" };
 
 function getUserAgent() {
-  return `MMKubicki-ScoopBucket/${context.version} octokit.js`
+  return `MMKubicki-ScoopBucket/${context.version} octokit.js`;
 }
 
 await new Command()
@@ -46,7 +45,7 @@ await new Command()
       },
       octokit: new Octokit({
         userAgent: getUserAgent(),
-        auth: Deno.env.get("GH_TOKEN")
+        auth: Deno.env.get("GH_TOKEN"),
       }),
     };
 
@@ -60,7 +59,7 @@ await new Command()
     if (typeof latest === "undefined") {
       console.log("not found");
     } else {
-      console.log(formatSemVer(latest));
+      console.log(latest[1]);
     }
 
     Deno.exit(0); // See https://github.com/octokit/octokit.js/issues/2079
