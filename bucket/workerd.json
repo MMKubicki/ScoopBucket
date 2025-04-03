@@ -1,12 +1,12 @@
 {
-    "version": "1.20250402.0",
+    "version": "1.20250403.0",
     "description": "The JavaScript / Wasm runtime that powers Cloudflare Workers",
     "homepage": "https://github.com/cloudflare/workerd",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/cloudflare/workerd/releases/download/v1.20250402.0/workerd-windows-64.gz",
-            "hash": "96db4a08f3fb00b164ee4a054fadce6cd618212c59b7718986330c45527acdf2"
+            "url": "https://github.com/cloudflare/workerd/releases/download/v1.20250403.0/workerd-windows-64.gz",
+            "hash": "21527e6abf07f6403afd53d47cd735173c11771f624ad51d37c594c011de9c7a"
         }
     },
     "bin": "workerd.exe",
