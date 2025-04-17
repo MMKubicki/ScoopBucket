@@ -1,12 +1,12 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.2",
   "tasks": {
     "gh_releases": "deno run --allow-net=api.github.com --allow-env=GH_TOKEN gh_releases.ts"
   },
   "imports": {
     "@cliffy/command": "jsr:@cliffy/command@^1.0.0-rc.7",
-    "@std/datetime": "jsr:@std/datetime@^0.225.3",
-    "@std/semver": "jsr:@std/semver@^1.0.3",
-    "octokit": "npm:octokit@^4.1.0"
+    "@std/datetime": "jsr:@std/datetime@^0.225.4",
+    "@std/semver": "jsr:@std/semver@^1.0.5",
+    "octokit": "npm:octokit@^4.1.3"
   }
 }
