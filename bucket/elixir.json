@@ -3,8 +3,8 @@
     "description": "A dynamic and functional programming language designed for building scalable and maintainable applications. Built on latest OTP",
     "homepage": "https://elixir-lang.org/",
     "license": "Apache-2.0",
-    "url": "https://github.com/elixir-lang/elixir/releases/download/v1.19.5/elixir-otp-27.zip",
-    "hash": "1ab3154ec19adcd4b764cf96badecbe44df5ec6f358dc0fbe29c3749ff6c08de",
+    "url": "https://github.com/elixir-lang/elixir/releases/download/v1.19.5/elixir-otp-28.zip",
+    "hash": "ca481510feb6dabc875bba43e44b25c7abafa53bd7a103639851b7aeace8a022",
     "env_add_path": "bin",
     "suggest": {
         "Erlang": "erlang"
@@ -14,7 +14,8 @@
             "$responseRelease = (iwr -Headers @{'Accept'='applications/vnd.github+json';'X-Github-Api-Version'='2022-11-28';'Authorization'=$env:GH_TOKEN} -Uri 'https://api.github.com/repos/elixir-lang/elixir/releases/latest').Content | ConvertFrom-Json",
             "$responseRelease.tag_name -match '^v(?<version>[\\d.]+)$'",
             "$version = $Matches.version",
-            "$responseAssets = (iwr -Headers  @{'Accept'='applications/vnd.github+json';'X-Github-Api-Version'='2022-11-28'} -Uri $responseRelease.assets_url).Content | ConvertFrom-Json",
+            "$assetUrl = $responseRelease.assets_url + '?per_page=100'",
+            "$responseAssets = (iwr -Headers  @{'Accept'='applications/vnd.github+json';'X-Github-Api-Version'='2022-11-28'} -Uri $assetUrl).Content | ConvertFrom-Json",
             "$otpVersion = ($responseAssets |foreach{if($_.name -match '^elixir-otp-(?<otpversion>\\d+).zip$') {$Matches.otpversion}} |measure -Maximum).Maximum",
             "Write-Output $version $otpVersion"
         ],
