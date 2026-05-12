@@ -7,6 +7,6 @@
     "@cliffy/command": "jsr:@cliffy/command@^1.1.0",
     "@std/datetime": "jsr:@std/datetime@^0.225.7",
     "@std/semver": "jsr:@std/semver@^1.0.8",
-    "octokit": "npm:octokit@^4.1.4"
+    "octokit": "npm:octokit@^5.0.5"
   }
 }
