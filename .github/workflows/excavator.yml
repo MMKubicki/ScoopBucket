@@ -19,22 +19,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@main
-      - name: Cache Deno dependencies
-        uses: actions/cache@v5
-        with:
-          path: ${{ env.DENO_DIR }}
-          key: deno-dir-${{ hashFiles('scripts/deno/deno.lock') }}
-          restore-keys: |
-            ${{ hashFiles('scripts/deno/deno.lock') }}
-            deno-dir-
-            deno-
       - name: Setup Deno
         uses: denoland/setup-deno@v2
         with:
           deno-version: v2.x
+          cache: true
+      - name: Install Deno dependencies
+        run: deno install --config .\scripts\deno\deno.json --lock .\scripts\deno\deno.lock
       - name: Excavate
         uses: ScoopInstaller/GithubActions@main
         env:
-          DENO_DIR: ${{ env.DENO_DIR }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SKIP_UPDATED: 1
