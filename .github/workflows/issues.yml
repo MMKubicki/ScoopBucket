@@ -1,14 +1,22 @@
+name: Issues
+
 on:
   issues:
     types: [opened, labeled]
-name: Issues
+
+permissions:
+  # for auto hash fixing
+  contents: write
+  issues: write
+
 jobs:
   issueHandler:
     name: IssueHandler
     runs-on: windows-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@main
+      - name: Checkout
+        uses: actions/checkout@main
       - name: IssueHandler
         uses: ScoopInstaller/GithubActions@main
         if: github.event.action == 'opened' || (github.event.action == 'labeled' && contains(github.event.issue.labels.*.name, 'verify'))

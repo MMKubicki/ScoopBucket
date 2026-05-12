@@ -1,14 +1,21 @@
-on:
-  pull_request_target:
-    types: [opened]
 name: Pull Requests
+
+on:
+  pull_request:
+    types: [opened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   pullRequestHandler:
     name: PullRequestHandler
     runs-on: windows-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@main
+      - name: Checkout
+        uses: actions/checkout@main
       - name: PullRequestHandler
         uses: ScoopInstaller/GithubActions@main
         env:
