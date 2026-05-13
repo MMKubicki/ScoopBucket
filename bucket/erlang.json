@@ -1,5 +1,5 @@
 {
-    "version": "28.5",
+    "version": "29.0",
     "description": "A programming language used to build massively scalable soft real-time systems with requirements on high availability. Latest",
     "homepage": "https://www.erlang.org",
     "license": "Apache-2.0",
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/erlang/otp/releases/download/OTP-28.5/otp_win64_28.5.exe#/dl.7z",
-            "hash": "46f56351e2e67865c6aaff83bcd0a7d97d73bea643a0531774dd9ba8fbee7dc0"
+            "url": "https://github.com/erlang/otp/releases/download/OTP-29.0/otp_win64_29.0.exe#/dl.7z",
+            "hash": "md5:339f1d0d56703cc1388067e4a5046b02"
         }
     },
     "installer": {
