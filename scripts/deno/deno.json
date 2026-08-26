@@ -4,7 +4,7 @@
     "gh_releases": "deno run --allow-net=api.github.com --allow-env=GH_TOKEN gh_releases.ts"
   },
   "imports": {
-    "@cliffy/command": "jsr:@cliffy/command@^1.1.0",
+    "@cliffy/command": "jsr:@cliffy/command@^1.2.1",
     "@std/datetime": "jsr:@std/datetime@^0.225.7",
     "@std/semver": "jsr:@std/semver@^1.0.8",
     "octokit": "npm:octokit@^5.0.5"
